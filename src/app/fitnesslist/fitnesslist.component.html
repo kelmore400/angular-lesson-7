@@ -1,0 +1,10 @@
+<h3>Задание 3</h3>
+<input type='text' [(ngModel)]="title">
+<button (click)="addExercises()">Add new exercise</button>
+<button (click)="editExercises()">Finish editing</button>
+<ol>
+  <li *ngFor="let exercise of exercises">{{exercise.title}} 
+    <button (click)="selectExercises(exercise)">Edit</button>
+    <button (click)="deleteExercises(exercise.id)">Delete</button>
+  </li>
+</ol>
